@@ -1,0 +1,44 @@
+.sliderImg{
+    height: 200px;
+    width: 250px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    perspective: 100px;
+    margin: 10px;
+}
+
+ img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+.slider{
+    display: flex;
+    place-items: center;
+    position: relative;
+    height: 250px;  
+    width: 100%;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    width:calc(250px*12);
+    animation: play 40s linear infinite;
+
+}
+
+@keyframes play{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(calc(-250px*6));
+    }
+}
+
+    img:hover{
+        transform: translateZ(20px);
+    }
